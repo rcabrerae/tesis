@@ -33,7 +33,8 @@ $gsent->execute();
         <br><br>
         <h1>Ventas</h1>
         <a type="button" class="btn btn-primary" href="crear_ventas_user.php">Crear Ventas</a>
-        <br><br>
+	<a type="button" class="btn btn-primary" href="crear_detalle_user.php">Crear Detalle Venta</a>        
+	<br><br>
         <div class="card">
             <table class="table table-bordered">
                 <thead>

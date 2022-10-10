@@ -20,7 +20,12 @@ session_start();
 include("header_user.php");
 ?>
 <body background="https://th.bing.com/th/id/OIP.EEoGvNj08fU-n6vjDFOwNQHaE8?w=282&h=188&c=7&r=0&o=5&dpr=1.65&pid=1.7">
+<?php
+date_default_timezone_set('America/Mexico_City');
+$fecha=date("Y-m-d");
+$hora=date("H:i:s");
 
+?>
 <div class="container">
     <br>
     <h1>Registro de Nueva Venta</h1>
@@ -28,11 +33,11 @@ include("header_user.php");
     <form action="guardar_ventas_user.php" method="POST">
         <div class="form-group">
             <label>Fecha(YYYY-MM-DD)</label>
-            <input class="form-control" type="" name="fecha">
+	    <input class="form-control" type="datetime" name="fecha" value="<?= $fecha?>">
         </div>
         <div class="form-group">
             <label>Hora(HH:MM:SS)</label>
-            <input class="form-control" type="" name="hora">
+            <input class="form-control" type="datetime" name="hora" value="<?= $hora?>">
         </div>
         <div class="form-group">
             <label>ID_cliente</label>

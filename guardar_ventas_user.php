@@ -1,8 +1,6 @@
 <?php
 include("indice.php");
 
-
-
 $fecha=leerParam("fecha","");
 $hora=leerParam("hora","");
 $idclie=leerParam("idcliente","");
@@ -21,8 +19,8 @@ $fila1 = $res1->fetch(PDO::FETCH_NUM);
 $idcompro=$fila1[0]+1;
 
 $sql="INSERT INTO ventas VALUES('$id','$fecha','$hora','$idclie','$idemplea','$idcompro')";
-$res= $xc->prepare($sql);
-$res->execute();
+$res2= $xc->prepare($sql);
+$res2->execute();
 header("Location:ventas_user.php");
 
 ?>
